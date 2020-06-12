@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Dish
+<div class="text-center">
+<h1>Add a Dish to Our Selections!</h1>
+    <form action="/process" method="post">
+    <p>Dish Name: <input type="text" asp-for="Name"/></p>
+    <p>Chef Name: <input type="text" asp-for="Chef"/></p>
+    <p>Dish Tastiness: <select asp-for="Tastiness">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+    </select></p>
+    <p>Calories in Dish: <input type="text" asp-for="Calories"/></p>
+    <p>Desciption of Dish: <textarea asp-for="Description"></textarea></p>
+    <input type="Submit" value="Submit Dish"/>
+    </form>
+
+<p><a href="/alldishes">See all dishes!</a> | <a href="/">Home</a></p>
+</div>

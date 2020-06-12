@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    @model List<Dish>
+    <table>
+        <thead>
+            <th>Dish Name</th>
+            <th>Chef</th>
+            <th>Tastiness</th>
+            <th>Calories</th>
+            <th>Description</th>
+
+        </thead>
+        <tbody>
+            @foreach(Dish d in Model)
+    {
+            <tr>
+                <td><a href="/dish/@d.DishId">@d.Name</a></td>
+                <td>@d.Chef</td>
+                <td>@d.Tastiness</td>
+                <td>@d.Calories</td>
+                <td>@d.Description</td>
+
+            </tr>
+    }
+        </tbody>
+    </table>
+    <p><a href="/">Home</a></p>
+    
+</body>
+</html>
